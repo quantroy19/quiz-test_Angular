@@ -1,20 +1,27 @@
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3 bg-light">
-  <div class="col">
+  <div class="col" *ngFor="let item of listSub">
     <div class="card shadow-sm">
       <div
-        class="card-head bg-warning fs-3 d-flex justify-content-center"
-        style="height: 150px"
+        class="card-head bg-warning d-flex justify-content-center d-flex align-items-center"
+        style="height: 250px"
       >
-        <p class="m-auto">PHP</p>
+        <b class="p-3" style="text-align: justify">
+          {{ item.Name }}
+        </b>
       </div>
 
       <div class="card-body">
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
+            <!-- app-quiz -->
             <button type="button" class="btn btn-sm btn-outline-info">
               View
             </button>
+            <!-- <button type="button" class="btn btn-sm btn-outline-secondary">
+              Edit
+            </button> -->
           </div>
+          <b class="text-muted">Code: {{ item.Code }}</b>
         </div>
       </div>
     </div>
