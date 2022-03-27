@@ -8,6 +8,12 @@ import { environment } from 'src/environments/environment';
 export class SubjectService {
   constructor(private http: HttpClient) {}
   getListSubject(): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}subjects`);
+    let apiUrl = environment.apiUrl + '/subjects';
+    return this.http.get<any>(apiUrl);
+  }
+  getListSubjectBySearch(text: string): Observable<any> {
+    let apiUrl = environment.apiUrl + '/subjects';
+    console.log(apiUrl + `?Name_like=${text}`);
+    return this.http.get<any>(apiUrl + `?Name_like=${text}`);
   }
 }

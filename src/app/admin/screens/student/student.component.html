@@ -1,0 +1,52 @@
+<h1 class="h2 my-3">List Students</h1>
+
+<table class="table table-striped table-hover">
+  <th>ID</th>
+  <th>User Name</th>
+  <th>Full Name</th>
+  <th>Email</th>
+  <th>Gender</th>
+  <th>Birthday</th>
+  <th>School Fee</th>
+  <th>
+    <a
+      href=""
+      class="btn btn-sm btn-success"
+      data-bs-toggle="modal"
+      data-bs-target="#formAddStudenModal"
+      routerLink="/admin/student/add"
+      >Add</a
+    >
+  </th>
+  <tbody>
+    <tr *ngFor="let student of listStudent">
+      <td>{{ student.id }}</td>
+      <td>{{ student.username }}</td>
+      <td>{{ student.fullname }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.gender | gender }}</td>
+      <td>{{ student.birthday }}</td>
+      <td>{{ student.schoolfee }}</td>
+      <td>
+        <a
+          class="btn btn-sm btn-warning"
+          [routerLink]="['/admin/student/edit/', student.id]"
+          (click)="editStudent(student)"
+          data-bs-toggle="modal"
+          data-bs-target="#formEditStudenModal"
+        >
+          <i class="fas fa-edit"></i></a
+        >&nbsp;
+        <a class="btn btn-sm btn-danger"
+          ><i
+            class="fas fa-trash"
+            (click)="confirmRemove(student.id, student.username)"
+          ></i
+        ></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-student-add-form
+  (addStudent)="saveAddFormStudent($event)"
+></app-student-add-form>

@@ -1,4 +1,20 @@
 {
+  "score_spectrum_statistics": {
+    "id": 1,
+    "0score": 3,
+    "1score": 3,
+    "2score": 5,
+    "3score": 6,
+    "4score": 8,
+    "5score": 9,
+    "6score": 5,
+    "7score": 4,
+    "8score": 5,
+    "9score": 3,
+    "10score": 3
+  },
+  "student_quizs": [],
+  "student_quiz_detail": [],
   "students": [
     {
       "id": 1,
@@ -18,10 +34,10 @@
       "fullname": "Nguyễn Văn Chí Phèo",
       "email": "pheonv@fpt.edu.vn",
       "gender": "true",
-      "birthday": "1985-10-11",
-      "schoolfee": "2500000",
+      "birthday": "1985-10-23",
+      "schoolfee": 3300000,
       "marks": {
-        "ADAV" : 9 
+        "ADAV": 9
       }
     },
     {
@@ -49,11 +65,23 @@
     {
       "fullname": "thienth",
       "username": "thienth",
+      "email": "quan@gmail.com",
       "password": "123456",
       "gender": "true",
-      "birthday": "1990-12-31T17:00:00.000Z",
+      "birthday": "1990-12-31",
       "schoolfee": 100,
       "id": 5
+    },
+    {
+      "username": "doquan285lg@gmail.com",
+      "fullname": "Do Minh quan",
+      "password": "123456",
+      "email": "doquan285lg@gmail.com",
+      "gender": "true",
+      "birthday": "2022-03-30",
+      "schoolfee": 3,
+      "avatar": null,
+      "id": 6
     }
   ],
   "subjects": [

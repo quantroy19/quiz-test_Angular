@@ -1,1 +1,19 @@
-<p>quiz works!</p>
+<div class="row">
+  <div class="col-12">
+    <div class="card card-primary">
+      <div class="card-header bg-primary">
+        <div class="col-6 text-white">
+          <h5 class="my-auto text-">{{ subName }}</h5>
+        </div>
+      </div>
+      <div class="card-body pl-4">
+        <h2>quiz 1</h2>
+        <p>Thời gian: 15 phút</p>
+        <i>Bắt đầu lúc: {{ today }}</i>
+        <hr />
+
+        <app-question [dataQuiz]="listQuiz"></app-question>
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,7 +14,11 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
             <!-- app-quiz -->
-            <button type="button" class="btn btn-sm btn-outline-info">
+            <button
+              routerLink="/quiz/{{ item.Code }}"
+              type="button"
+              class="btn btn-sm btn-outline-info"
+            >
               View
             </button>
             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">

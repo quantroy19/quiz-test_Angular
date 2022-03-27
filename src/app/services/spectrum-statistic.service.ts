@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class SpectrumStatisticService {
   constructor(private http: HttpClient) {}
-  checkLogin(): Observable<any> {
-    return this.http.get(environment.apiUrl + `/students`);
+  getDataSpectrumStatistics(): Observable<any> {
+    return this.http.get(environment.apiUrl + '/score_spectrum_statistics');
   }
 }

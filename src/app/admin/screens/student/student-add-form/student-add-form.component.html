@@ -1,0 +1,118 @@
+<div
+  class="modal fade"
+  id="formAddStudenModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          action=""
+          method="post"
+          [formGroup]="studentForm"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="username">User Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              formControlName="username"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+            />
+          </div>
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullname"
+              formControlName="fullname"
+            />
+          </div>
+          <div class="form-group">
+            <label for="avatar">Avatar</label>
+            <input
+              type="file"
+              class="form-control"
+              id="avatar"
+              formControlName="avatar"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+            />
+          </div>
+          <div class="form-group mb-2">
+            <label for="gender">Gender</label>
+            <select
+              name=""
+              id="gender"
+              class="form-select"
+              formControlName="gender"
+            >
+              <option selected value="true">Male</option>
+              <option value="false">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input
+              type="date"
+              class="form-control"
+              id="birthday"
+              formControlName="birthday"
+            />
+          </div>
+          <div class="form-group">
+            <label for="schoolfee">School Fee</label>
+            <input
+              type="number"
+              class="form-control"
+              id="schoolfee"
+              formControlName="schoolfee"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="saveStudent()"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

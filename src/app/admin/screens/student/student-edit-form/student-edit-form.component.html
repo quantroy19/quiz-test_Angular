@@ -1,0 +1,102 @@
+<h1 class="h2 my-3">Edit Student</h1>
+<div class="col-6 mx-auto p-4 border">
+  <form action="" method="post" [formGroup]="studentForm">
+    <div class="form-group">
+      <label for="username">ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="id"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <label for="username">User Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="username">Password</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        formControlName="password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fullname"
+        formControlName="fullname"
+      />
+    </div>
+    <div class="form-group">
+      <label for="avatar">Avatar</label>
+      <input
+        type="file"
+        class="form-control"
+        id="avatar"
+        formControlName="avatar"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group mb-2">
+      <label for="gender">Gender</label>
+      <select name="" id="gender" class="form-select" formControlName="gender">
+        <option selected value="true">Male</option>
+        <option value="false">Female</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday</label>
+      <input
+        type="date"
+        class="form-control"
+        id="birthday"
+        formControlName="birthday"
+      />
+    </div>
+    <div class="form-group">
+      <label for="schoolfee">School Fee</label>
+      <input
+        type="number"
+        class="form-control"
+        id="schoolfee"
+        formControlName="schoolfee"
+      />
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        routerLink="/admin/student"
+      >
+        Close
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        routerLink="/admin/student"
+        (click)="saveEditStudent()"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>

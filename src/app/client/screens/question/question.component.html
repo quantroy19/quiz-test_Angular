@@ -1,0 +1,26 @@
+<form (ngSubmit)="submitFormQuiz()" [formGroup]="formSave">
+  <fieldset *ngFor="let ques of listQues; let i = index" class="mb-2">
+    <h5 class="text-primary">Câu hỏi {{ i + 1 }}: {{ ques.Text }}</h5>
+    <ul>
+      <div class="form-group mb-3" *ngFor="let ans of ques.Answers">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            id="{{ ans.Id }}"
+            [value]="ans.Id"
+            [name]="ques.Id"
+          />
+          <label for="{{ ans.Id }}" class="form-check-label">
+            {{ ans.Text }}</label
+          >
+        </div>
+      </div>
+    </ul>
+  </fieldset>
+  <button class="btn btn-sm btn-info mt-3 text-white" type="submit">
+    Submit
+  </button>
+  &nbsp;
+  <button routerLink="/" class="btn btn-sm btn-dark mt-3" type="">Back</button>
+</form>
