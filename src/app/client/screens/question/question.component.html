@@ -1,4 +1,4 @@
-<form (ngSubmit)="submitFormQuiz()" [formGroup]="formSave">
+<form (ngSubmit)="confirmSubmitFormQuiz()">
   <fieldset *ngFor="let ques of listQues; let i = index" class="mb-2">
     <h5 class="text-primary">Câu hỏi {{ i + 1 }}: {{ ques.Text }}</h5>
     <ul>
@@ -10,6 +10,7 @@
             id="{{ ans.Id }}"
             [value]="ans.Id"
             [name]="ques.Id"
+            [(ngModel)]="ques.selected"
           />
           <label for="{{ ans.Id }}" class="form-check-label">
             {{ ans.Text }}</label

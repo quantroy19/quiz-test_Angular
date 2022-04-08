@@ -12,7 +12,10 @@ import { environment } from 'src/environments/environment';
 // environment.author;
 export class HomeComponent implements OnInit {
   @Input('dataSub') h: any;
+  loggedInUser = JSON.parse(localStorage.getItem('login_user') || '{}');
   constructor() {}
-  authorName = localStorage.getItem('authorName');
-  ngOnInit(): void {}
+  // authorName = localStorage.getItem('login_user');
+  ngOnInit(): void {
+    // console.log(`qq`, this.authorName);
+  }
 }

@@ -9,18 +9,18 @@ import { environment } from 'src/environments/environment';
 export class StudentService {
   constructor(private http: HttpClient) {}
   getAllStudent(): Observable<any> {
-    return this.http.get(environment.apiUrl + '/students');
+    return this.http.get(environment.user_api);
   }
   getStudentById(id: any): Observable<any> {
-    return this.http.get(environment.apiUrl + `/students/${id}`);
+    return this.http.get(environment.user_api + `/${id}`);
   }
   saveAddStudent(data: any): Observable<any> {
-    return this.http.post(environment.apiUrl + '/students', data);
+    return this.http.post(`${environment.user_api}`, `${data}`);
   }
   saveEditStudent(data: any, id: number): Observable<any> {
-    return this.http.patch(environment.apiUrl + `/students/${id}`, data);
+    return this.http.patch(environment.user_api + `/${id}`, data);
   }
   removeStudent(id: any): Observable<any> {
-    return this.http.delete(environment.apiUrl + `/students/${id}`);
+    return this.http.delete(environment.user_api + `/${id}`);
   }
 }

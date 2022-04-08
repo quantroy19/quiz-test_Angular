@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { NgChartsModule } from 'ng2-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from 'angularx-social-login';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +30,11 @@ import { DashboardComponent } from './admin/screens/dashboard/dashboard.componen
 import { GenderPipe } from './pipes/gender.pipe';
 import { StudentAddFormComponent } from './admin/screens/student/student-add-form/student-add-form.component';
 import { StudentEditFormComponent } from './admin/screens/student/student-edit-form/student-edit-form.component';
+import { HistoryComponent } from './client/screens/history/history.component';
+import { MomentModule } from 'ngx-moment';
+import { SubNamePipe } from './pipes/sub-name.pipe';
+
+// import { TestQuizComponent } from './test-quiz/test-quiz.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +52,9 @@ import { StudentEditFormComponent } from './admin/screens/student/student-edit-f
     GenderPipe,
     StudentAddFormComponent,
     StudentEditFormComponent,
+    HistoryComponent,
+    SubNamePipe,
+    // TestQuizComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,8 +66,31 @@ import { StudentEditFormComponent } from './admin/screens/student/student-edit-f
     NgChartsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    SocialLoginModule,
+    MomentModule.forRoot({
+      relativeTimeThresholdOptions: {
+        m: 59,
+      },
+    }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(environment.GOOGLE_CLIENT_ID),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(environment.FACEBOOK_CLIENT_ID),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

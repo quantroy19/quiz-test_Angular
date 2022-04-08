@@ -27,6 +27,8 @@ export class StudentComponent implements OnInit {
   saveAddFormStudent($dataStudent: any): void {
     this.studentService.saveAddStudent($dataStudent).subscribe((data) => {
       this.listStudent.push(data);
+      console.log(data);
+
       this.toastr.success('Add Student Successfully!');
     });
   }
@@ -41,8 +43,6 @@ export class StudentComponent implements OnInit {
       if (result.value) {
         Swal.fire('Deleted!', '', 'success');
         this.removeStudent(id);
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', '', 'error');
       }
     });
   }

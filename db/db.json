@@ -15,7 +15,7 @@
   },
   "student_quizs": [],
   "student_quiz_detail": [],
-  "students": [
+  "users": [
     {
       "id": 1,
       "username": "teonv",
@@ -26,41 +26,6 @@
       "birthday": "1995-12-21",
       "schoolfee": "1500000",
       "marks": "0"
-    },
-    {
-      "id": 2,
-      "username": "pheonv",
-      "password": "iloveyou",
-      "fullname": "Nguyễn Văn Chí Phèo",
-      "email": "pheonv@fpt.edu.vn",
-      "gender": "true",
-      "birthday": "1985-10-23",
-      "schoolfee": 3300000,
-      "marks": {
-        "ADAV": 9
-      }
-    },
-    {
-      "id": 3,
-      "username": "nopt",
-      "password": "iloveyou",
-      "fullname": "Phạm Thị Nở",
-      "email": "nopt@fpt.edu.vn",
-      "gender": "false",
-      "birthday": "1993-05-15",
-      "schoolfee": "2000000",
-      "marks": "0"
-    },
-    {
-      "username": "thienth",
-      "password": "123456",
-      "fullname": "trần hữu thiện",
-      "email": "thienth@gmail.com",
-      "gender": "true",
-      "birthday": "1991-01-01",
-      "schoolfee": "11000",
-      "marks": "8",
-      "id": 4
     },
     {
       "fullname": "thienth",
@@ -76,12 +41,84 @@
       "username": "doquan285lg@gmail.com",
       "fullname": "Do Minh quan",
       "password": "123456",
-      "email": "doquan285lg@gmail.com",
+      "email": "quan285lg@gmail.com",
       "gender": "true",
       "birthday": "2022-03-30",
       "schoolfee": 3,
       "avatar": null,
       "id": 6
+    },
+    {
+      "social_id": "108866644155901019258",
+      "email": "doquan285lg@gmail.com",
+      "fullname": "Quân Troy",
+      "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gj0z6iKWarG7yVxGTscl8NW0EUkjTuy59xncJ1SlQ=s96-c",
+      "auth_token": "ya29.A0ARrdaM9zSm8y9XFttrgYpSnI04gYCo8x4nGJn9CWTZnVfBq9_yc4PJLxbe59yR9-yq5IqKKX9B2DeJVG2ufOF9Nr0QdqdHEP0zB_Pqs2-0rkQDhCm8vKj46imQu9G5hMPoRvf-sXAfKDm0symlaDiLJzKG6Tnw",
+      "id": 7,
+      "sub_id": "PHPP",
+      "roles": [
+        {
+          "name": "admin"
+        },
+        {
+          "name": "member"
+        }
+      ],
+      "mark": [
+        {
+          "sub_id": "ADAV",
+          "mark": 4,
+          "start_time": "06/04/2022 11:27:02",
+          "end_time": "06/04/2022 11:27:19"
+        },
+        {
+          "sub_id": "ADAV",
+          "mark": 1,
+          "start_time": "07/04/2022 22:18:33",
+          "end_time": "07/04/2022 22:18:55"
+        },
+        {
+          "sub_id": "PHPP",
+          "mark": 1,
+          "start_time": "07/04/2022 22:20:45",
+          "end_time": "07/04/2022 22:21:02"
+        },
+        {
+          "sub_id": "WEBU",
+          "mark": 3,
+          "start_time": "07/04/2022 23:16:21",
+          "end_time": "07/04/2022 23:16:41"
+        },
+        {
+          "sub_id": "DBAV",
+          "mark": 6,
+          "start_time": "07/04/2022 23:22:10",
+          "end_time": "07/04/2022 23:22:43"
+        }
+      ]
+    },
+    {
+      "social_id": "1161288804640513",
+      "email": "doquan285lg@gmail.com",
+      "fullname": "Đỗ Minh Quân",
+      "avatar": "https://graph.facebook.com/1161288804640513/picture?type=normal",
+      "auth_token": "EAAEBOLfVBA8BABvyq85qxwGFcGUy4DOZAVRIiI75TB1VBrLIKDZCcpONXVjNsZA8oxAqZBBXB8F0MKgoCMKpNW93zakhZCi4FVNY61lCchlzsmG6I6h8KmzGG97tbhlYZBCbNUVxwarI2rUOCcrqJPqGWFAuYsi06gpJ78VhVN5mH1VZAWQCmpZC8ljXTAB7I7gy7t6bOfsPvZCosGMXWmmWG",
+      "id": 8,
+      "mark": []
+    },
+    {
+      "social_id": "102182466125353918259",
+      "email": "quandmph13848@fpt.edu.vn",
+      "fullname": "Đỗ Minh Quân PH 1 3 8 4 8",
+      "avatar": "https://lh3.googleusercontent.com/a-/AOh14GhpXJDLr4OJsFxsOz6kNmAv1vq35xAttqO6uJck5A=s96-c",
+      "auth_token": "ya29.A0ARrdaM9QZfx21sXkcBHvV_NhVaScTV6q2gqoZu9V1bnvTMN-SO0bj6e0Zz9-zyERtt5nNV7M47Vv39PKApbh4me59qpas75wUqt4DwC7oPuuV4JB9pmsujYizn9rL7kjtXuKxdMjoTo7DxxvqFayFaGXi96pNQ",
+      "roles": [
+        {
+          "name": "member"
+        }
+      ],
+      "mark": [],
+      "id": 9
     }
   ],
   "subjects": [

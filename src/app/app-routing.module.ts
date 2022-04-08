@@ -1,3 +1,6 @@
+import { HistoryComponent } from './client/screens/history/history.component';
+import { AuthGuard } from './helpers/auth.guard';
+import { AuthAdminGuard } from './helpers/auth-admin.guard';
 import { StudentEditFormComponent } from './admin/screens/student/student-edit-form/student-edit-form.component';
 import { DashboardComponent } from './admin/screens/dashboard/dashboard.component';
 import { StudentComponent } from './admin/screens/student/student.component';
@@ -19,13 +22,15 @@ const routes: Routes = [
     component: HomeLayoutComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'quiz/:id', component: QuizComponent },
+      { path: 'quiz/:id', component: QuizComponent, canActivate: [AuthGuard] },
       { path: 'subject', component: SubjectComponent },
+      { path: 'history', component: HistoryComponent },
     ],
   },
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [AuthAdminGuard],
     children: [
       { path: '', component: DashboardComponent },
       { path: 'question', component: QuizComponent },

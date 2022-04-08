@@ -22,7 +22,6 @@ export class StudentAddFormComponent implements OnInit {
   @Output('addStudent') addStudentForm = new EventEmitter();
   ngOnInit(): void {}
   saveStudent() {
-    console.log(this.studentForm.value);
     this.addStudentForm.emit(this.studentForm.value);
   }
 }

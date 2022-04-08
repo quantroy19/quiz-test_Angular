@@ -8,11 +8,11 @@
       </div>
       <div class="card-body pl-4">
         <h2>quiz 1</h2>
-        <p>Thời gian: 15 phút</p>
-        <i>Bắt đầu lúc: {{ today }}</i>
+        <p>Time: 15 phút</p>
+        <i>Start time: {{ today }}</i>
         <hr />
 
-        <app-question [dataQuiz]="listQuiz"></app-question>
+        <app-question [dataToday]="today"></app-question>
       </div>
     </div>
   </div>

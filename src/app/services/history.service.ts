@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
-export class SpectrumStatisticService {
+export class HistoryService {
   constructor(private http: HttpClient) {}
-  getDataSpectrumStatistics(): Observable<any> {
-    return this.http.get(environment.spectrum_statistic_api);
+  getNameSubbyId(id: string): Observable<any> {
+    return this.http.get<any>(environment.subject_api + `/?Code=${id}`);
   }
 }

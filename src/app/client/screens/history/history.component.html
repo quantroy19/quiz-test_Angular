@@ -1,0 +1,20 @@
+<!-- Tomorrow is after today: {{ tomorrow | amIsAfter:today:'day' }} -->
+<table class="table table-hover">
+  <thead>
+    <!-- <th>ID</th> -->
+    <th>Code</th>
+    <th>Subject</th>
+    <th>Score</th>
+    <th>Start time</th>
+    <th>End time</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let quizHistory of listQuizHistory">
+      <td>{{ quizHistory.sub_id }}</td>
+      <td>{{ quizHistory.sub_id | subName }}</td>
+      <td>{{ quizHistory.mark }} /10</td>
+      <td>{{ quizHistory.start_time }}</td>
+      <td>{{ quizHistory.end_time }}</td>
+    </tr>
+  </tbody>
+</table>
