@@ -76,19 +76,23 @@ export class LoginComponent implements OnInit {
       this.userService
         .checkLoginWithSocial(this.socialUser.email, this.socialUser.id)
         .subscribe((data) => {
-          if (data.length == 0) {
+          // console.log(data);
+
+          if (!data) {
             this.userService
               .loginWithSocial(this.infoUserLoginSocal)
               .subscribe((data) => {
+                localStorage.setItem('login_user', JSON.stringify(data));
                 console.log(data);
               });
           } else {
             console.log(`fales`, data);
             console.log('user da tung dd nhap');
           }
+          // window.location.href = '/';
+          this.router.navigate(['/']);
         });
 
-      window.location.href = '/';
       // this.router.navigate(['']);
     });
   }
