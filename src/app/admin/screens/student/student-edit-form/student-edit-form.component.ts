@@ -41,6 +41,8 @@ export class StudentEditFormComponent implements OnInit {
     this.studentService
       .saveEditStudent(this.studentForm.value, this.studentId)
       .subscribe((data) => {
+        console.log(data);
+
         this.toastr.success('Edit Student Successfull!');
       });
   }

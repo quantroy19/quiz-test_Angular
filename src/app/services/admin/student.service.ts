@@ -15,7 +15,7 @@ export class StudentService {
     return this.http.get(environment.user_api + `/${id}`);
   }
   saveAddStudent(data: any): Observable<any> {
-    return this.http.post(`${environment.user_api}`, `${data}`);
+    return this.http.post(environment.user_api, data);
   }
   saveEditStudent(data: any, id: number): Observable<any> {
     return this.http.patch(environment.user_api + `/${id}`, data);

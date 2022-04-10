@@ -5,6 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GenderPipe implements PipeTransform {
   transform(value: any) {
-    return value ? 'Nam' : 'Nữ';
+    if (value === 'true') {
+      return 'Nam';
+    } else {
+      return 'Nữ';
+    }
   }
 }

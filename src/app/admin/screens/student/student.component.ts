@@ -21,13 +21,16 @@ export class StudentComponent implements OnInit {
 
   getAllStudents(): void {
     this.studentService.getAllStudent().subscribe((data) => {
-      this.listStudent = data;
+      this.listStudent = data.filter((item: any) => 'password' in item);
+      console.log(this.listStudent);
     });
   }
-  saveAddFormStudent($dataStudent: any): void {
-    this.studentService.saveAddStudent($dataStudent).subscribe((data) => {
-      this.listStudent.push(data);
+  saveAddFormStudent(dataStudent: any): void {
+    console.log(dataStudent);
+
+    this.studentService.saveAddStudent(dataStudent).subscribe((data) => {
       console.log(data);
+      this.listStudent.push(data);
 
       this.toastr.success('Add Student Successfully!');
     });

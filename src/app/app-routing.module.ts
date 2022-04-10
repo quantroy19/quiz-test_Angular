@@ -1,3 +1,4 @@
+import { StdLoginWithSocialComponent } from './admin/screens/student/std-login-with-social/std-login-with-social.component';
 import { HistoryComponent } from './client/screens/history/history.component';
 import { AuthGuard } from './helpers/auth.guard';
 import { AuthAdminGuard } from './helpers/auth-admin.guard';
@@ -35,6 +36,7 @@ const routes: Routes = [
       { path: '', component: DashboardComponent },
       { path: 'question', component: QuizComponent },
       { path: 'student', component: StudentComponent },
+      { path: 'student/social', component: StdLoginWithSocialComponent },
       { path: 'student/edit/:id', component: StudentEditFormComponent },
       { path: 'subject', component: SubjectAdminComponent },
     ],

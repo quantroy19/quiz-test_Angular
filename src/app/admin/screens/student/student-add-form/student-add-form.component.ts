@@ -17,11 +17,13 @@ export class StudentAddFormComponent implements OnInit {
     gender: new FormControl('true'),
     birthday: new FormControl(),
     schoolfee: new FormControl(),
-    avatar: new FormControl(),
+    // avatar: new FormControl(),
   });
   @Output('addStudent') addStudentForm = new EventEmitter();
   ngOnInit(): void {}
   saveStudent() {
+    // console.log(this.studentForm.value);
+
     this.addStudentForm.emit(this.studentForm.value);
   }
 }

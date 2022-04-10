@@ -33,6 +33,7 @@ import { StudentEditFormComponent } from './admin/screens/student/student-edit-f
 import { HistoryComponent } from './client/screens/history/history.component';
 import { MomentModule } from 'ngx-moment';
 import { SubNamePipe } from './pipes/sub-name.pipe';
+import { StdLoginWithSocialComponent } from './admin/screens/student/std-login-with-social/std-login-with-social.component';
 
 // import { TestQuizComponent } from './test-quiz/test-quiz.component';
 
@@ -54,6 +55,7 @@ import { SubNamePipe } from './pipes/sub-name.pipe';
     StudentEditFormComponent,
     HistoryComponent,
     SubNamePipe,
+    StdLoginWithSocialComponent,
     // TestQuizComponent,
   ],
   imports: [
