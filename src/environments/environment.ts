@@ -4,7 +4,7 @@
 
 const baseAPIURL = 'http://localhost:3000';
 export const environment = {
-  production: false,
+  production: true,
   GOOGLE_CLIENT_ID:
     '703654222704-39k5ll3nousr20ihca0i7467tb3fqura.apps.googleusercontent.com',
   FACEBOOK_CLIENT_ID: '282818090697743',
