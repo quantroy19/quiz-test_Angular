@@ -34,6 +34,9 @@ import { HistoryComponent } from './client/screens/history/history.component';
 import { MomentModule } from 'ngx-moment';
 import { SubNamePipe } from './pipes/sub-name.pipe';
 import { StdLoginWithSocialComponent } from './admin/screens/student/std-login-with-social/std-login-with-social.component';
+import { AdminSubjectComponent } from './admin/screens/admin-subject/admin-subject.component';
+import { AdminQuestionComponent } from './admin/screens/admin-question/admin-question.component';
+import { AdminQuestionAddComponent } from './admin/screens/admin-question-add/admin-question-add.component';
 
 // import { TestQuizComponent } from './test-quiz/test-quiz.component';
 
@@ -56,6 +59,9 @@ import { StdLoginWithSocialComponent } from './admin/screens/student/std-login-w
     HistoryComponent,
     SubNamePipe,
     StdLoginWithSocialComponent,
+    AdminSubjectComponent,
+    AdminQuestionComponent,
+    AdminQuestionAddComponent,
     // TestQuizComponent,
   ],
   imports: [

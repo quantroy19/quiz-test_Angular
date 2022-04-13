@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-based">
+      <thead>
+        <tr>
+          <th class="col-1">ID</th>
+          <th class="col-4">Question</th>
+          <th class="col-5">Answer</th>
+          <th class="col-2">
+            <a
+              href=""
+              data-bs-toggle="modal"
+              data-bs-target="#formAddQuestionModal"
+              class="btn btn-success"
+              >Add</a
+            >
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let q of list_question">
+          <td>{{ q.id }}</td>
+          <td>{{ q.Text }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let a of q.Answers">
+                <span *ngIf="a.id === q.AnswerId" class="text-success fw-bold">
+                  {{ a.Text }}</span
+                ><span *ngIf="a.id !== q.AnswerId">{{ a.Text }}</span>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <a
+              class="btn btn-sm btn-warning"
+              [routerLink]="['/admin/student/edit/']"
+              data-bs-toggle="modal"
+              data-bs-target="#formEditStudenModal"
+            >
+              <i class="fas fa-edit"></i></a
+            >&nbsp;
+            <a class="btn btn-sm btn-danger" (click)="confirmRemove(q.id)"
+              ><i class="fas fa-trash"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-admin-question-add
+      (evAddQues)="addQuestion($event)"
+    ></app-admin-question-add>
+  </div>
+</div>

@@ -9,6 +9,14 @@ import { Observable } from 'rxjs';
 export class QuestionService {
   constructor(private http: HttpClient) {}
   getQuesbySubId(subId: any): Observable<any> {
-    return this.http.get<any>(environment.baseAPI + `/${subId}`);
+    return this.http.get<any>(
+      environment.baseAPI + `/${subId}?_sort=id&_order=desc`
+    );
+  }
+  addQues(subId: any, data: any): Observable<any> {
+    return this.http.post<any>(environment.baseAPI + `/${subId}`, data);
+  }
+  removeQues(id: any, subId: any): Observable<any> {
+    return this.http.delete<any>(environment.baseAPI + `/${subId}/${id}`);
   }
 }

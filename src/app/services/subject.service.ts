@@ -10,9 +10,9 @@ export class SubjectService {
   getListSubject(): Observable<any> {
     return this.http.get<any>(environment.subject_api);
   }
-  // getListSubjectBySearch(text: string): Observable<any> {
-  //   let apiUrl = environment.apiUrl + '/subjects';
-  //   console.log(apiUrl + `?Name_like=${text}`);
-  //   return this.http.get<any>(apiUrl + `?Name_like=${text}`);
-  // }
+  getListSubjectBySearch(text: string): Observable<any> {
+    let apiUrl = environment.subject_api;
+    console.log(apiUrl + `?Name_like=${text}`);
+    return this.http.get<any>(apiUrl + `?Name_like=${text}`);
+  }
 }

@@ -92,6 +92,24 @@
           "mark": 6,
           "start_time": "07/04/2022 23:22:10",
           "end_time": "07/04/2022 23:22:43"
+        },
+        {
+          "sub_id": "ADBS",
+          "mark": 1,
+          "start_time": "10/04/2022 23:28:12",
+          "end_time": "10/04/2022 23:29:24"
+        },
+        {
+          "sub_id": "ADAV",
+          "mark": 2,
+          "start_time": "13/04/2022 09:57:56",
+          "end_time": "13/04/2022 09:58:14"
+        },
+        {
+          "sub_id": "ADBS",
+          "mark": 4,
+          "start_time": "13/04/2022 10:02:43",
+          "end_time": "13/04/2022 10:03:01"
         }
       ]
     },
@@ -140,15 +158,24 @@
       "id": 16
     },
     {
-      "username": "teon3222222",
-      "fullname": "123",
+      "username": "teonv11111@fpt.edu.vn",
+      "fullname": "Do Minh quan",
       "email": "doquan285lg@gmail.com",
-      "password": "iloveyou33",
+      "password": "iloveyou333",
+      "gender": "true",
+      "birthday": "2022-04-21",
+      "schoolfee": 33,
+      "id": 19
+    },
+    {
+      "username": "teonv@fpt.edu.vn",
+      "fullname": "Do Minh quan",
+      "email": "doquan2212232285lg@gmail.com",
+      "password": "iloveyou",
       "gender": "false",
-      "birthday": "2022-04-06",
-      "schoolfee": 333333,
-      "avatar": null,
-      "id": 18
+      "birthday": "2022-04-19",
+      "schoolfee": 3333333,
+      "id": 20
     }
   ],
   "subjects": [
@@ -4037,6 +4064,44 @@
           "Text": "Samsung"
         }
       ]
+    },
+    {
+      "Text": "sssss",
+      "AnswerId": 1,
+      "Answers": [
+        {
+          "id": 0,
+          "Text": "dddddd3"
+        },
+        {
+          "id": 1,
+          "Text": "sss3333333"
+        },
+        {
+          "id": 2,
+          "Text": "xx"
+        }
+      ],
+      "id": 25107
+    },
+    {
+      "Text": "fpt là gì?",
+      "AnswerId": 1,
+      "Answers": [
+        {
+          "id": 0,
+          "Text": "quanquan"
+        },
+        {
+          "id": 1,
+          "Text": "fpt"
+        },
+        {
+          "id": 2,
+          "Text": "33333"
+        }
+      ],
+      "id": 25108
     }
   ],
   "ADTE": [

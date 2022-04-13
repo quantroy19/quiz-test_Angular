@@ -9,7 +9,9 @@ import { Observable } from 'rxjs';
 export class QuizService {
   constructor(private http: HttpClient) {}
   getQuizbySubId(subId: any): Observable<any> {
-    return this.http.get<any>(environment.baseAPI + `/${subId}`);
+    return this.http.get<any>(
+      environment.baseAPI + `/${subId}?_sort=id&_order=desc`
+    );
   }
   getNameSubbySubId(subId: any): Observable<any> {
     return this.http.get<any>(environment.subject_api + `/?Code=${subId}`);

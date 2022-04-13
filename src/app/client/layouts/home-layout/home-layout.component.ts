@@ -1,3 +1,4 @@
+import { SharedService } from './../../../services/shared.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { subject } from './../../../models/subject';
@@ -17,10 +18,15 @@ export class HomeLayoutComponent implements OnInit {
     private subjectService: SubjectService,
     private toastr: ToastrService,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private sharedService: SharedService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.sharedService.currentMess.subscribe((data) => {
+    // this.textContent = false;
+    // });
+  }
   author = localStorage.getItem('login_user');
   // getSubjectBySearch() {
   //   this.subjectService
@@ -41,5 +47,9 @@ export class HomeLayoutComponent implements OnInit {
 
     this.userService.logout();
     window.location.reload();
+  }
+  searchSubject(keyword: any) {
+    console.log(keyword);
+    this.sharedService.sentMess(keyword);
   }
 }

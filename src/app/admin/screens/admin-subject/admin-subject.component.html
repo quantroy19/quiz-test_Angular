@@ -1,10 +1,9 @@
-{{ textContent }}
-
+<h2>List Subject</h2>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3 bg-light">
   <div class="col" *ngFor="let item of listSub">
     <div class="card shadow-sm">
       <div
-        class="card-head bg-warning d-flex justify-content-center d-flex align-items-center"
+        class="card-head bg-info d-flex justify-content-center d-flex align-items-center"
         style="height: 250px"
       >
         <b class="p-3" style="text-align: justify">
@@ -17,11 +16,11 @@
           <div class="btn-group">
             <!-- app-quiz -->
             <button
-              routerLink="/quiz/{{ item.Code }}"
+              routerLink="/admin/subject/{{ item.Code }}"
               type="button"
               class="btn btn-sm btn-outline-info"
             >
-              View
+              View questions
             </button>
             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">
               Edit
