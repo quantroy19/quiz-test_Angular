@@ -1,4 +1,4 @@
-const baseAPIURL = 'http://localhost:3000';
+const baseAPIURL = 'https://angular-project-344803.web.app';
 export const environment = {
   production: true,
   GOOGLE_CLIENT_ID:
